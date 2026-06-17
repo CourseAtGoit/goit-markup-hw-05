@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WebStudio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,11 +32,15 @@
         <nav class="header-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#features" class="nav-link current">Features</a>
+              <a href="#features" class="nav-link current" data-nav-link
+                >Features</a
+              >
             </li>
-            <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
             <li class="nav-item">
-              <a href="#portfolio" class="nav-link">Portfolio</a>
+              <a href="#team" class="nav-link" data-nav-link>Team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link" data-nav-link>Portfolio</a>
             </li>
           </ul>
         </nav>
@@ -63,7 +67,9 @@
       <section id="hero" class="section hero">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-button">Order Service</button>
+          <button type="button" class="hero-button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!--end hero-->
@@ -80,7 +86,7 @@
                 </svg>
               </div>
               <h3 class="features-item-title">Strategy</h3>
-              <p class="features-item-descroption">
+              <p class="features-item-description">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -565,8 +571,128 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe">
+          <p class="subscribe-title">Subscribe</p>
+          <form class="subscribe-form">
+            <label for="subscribe-email" class="sr-only">E-mail</label>
+            <input
+              type="email"
+              id="subscribe-email"
+              name="subscribe-email"
+              class="subscribe-input"
+              placeholder="E-mail"
+              required
+            />
+            <button type="submit" class="subscribe-button">
+              Subscribe
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- #end footer -->
+
+    <!-- #start modal -->
+    <div class="overlay" data-modal>
+      <div class="modal">
+        <button
+          type="button"
+          class="modal-close-button"
+          aria-label="Close modal"
+          data-modal-close
+        >
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal-description">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form">
+          <div class="field-wrap">
+            <label class="field-label" for="user-name">Name</label>
+            <div class="input-wrap">
+              <input
+                class="modal-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+                required
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="user-phone">Phone</label>
+            <div class="input-wrap">
+              <input
+                class="modal-input"
+                type="tel"
+                id="user-phone"
+                name="user-phone"
+                required
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="user-email">E-mail</label>
+            <div class="input-wrap">
+              <input
+                class="modal-input"
+                type="email"
+                id="user-email"
+                name="user-email"
+                required
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-textarea"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="field-wrap field-wrap-checkbox">
+            <input
+              name="user-policy"
+              id="user-policy"
+              type="checkbox"
+              value="user-policy"
+              class="modal-checkbox sr-only"
+            />
+            <label for="user-policy" class="checkbox-label">
+              <span class="checkbox-icon">
+                <svg class="checkbox-icon-svg" width="10" height="8">
+                  <use href="./images/icons.svg#check-mark" />
+                </svg>
+              </span>
+              <span class="checkbox-text"
+                >I accept the terms and conditions of the
+                <a href="#">Privacy Policy</a></span
+              >
+            </label>
+          </div>
+          <button type="submit" class="modal-button">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- #end modal -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/nav.js"></script>
   </body>
 </html>

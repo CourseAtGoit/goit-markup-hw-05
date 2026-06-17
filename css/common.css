@@ -35,6 +35,18 @@ img {
   height: auto;
 }
 
+button {
+  font-family: inherit;
+  color: currentColor;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
 .container {
   max-width: 1158px;
   margin: 0 auto;
