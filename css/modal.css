@@ -99,6 +99,7 @@
 
 .modal-input {
   width: 100%;
+  height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 38px;
@@ -131,6 +132,10 @@
   fill: #4d5ae5;
 }
 
+.textarea-wrap {
+  margin-bottom: 16px;
+}
+
 .modal-textarea {
   font-size: 12px;
   line-height: 1.16667;
@@ -148,7 +153,7 @@
   color: rgba(46, 47, 66, 0.4);
 }
 
-.field-wrap-checkbox {
+.checkbox-wrap {
   margin-bottom: 24px;
 }
 
@@ -178,8 +183,8 @@
 }
 
 .modal-checkbox:checked + .checkbox-label .checkbox-icon {
-  background-color: #4d5ae5;
-  border-color: #4d5ae5;
+  background-color: #404bbf;
+  border-color: #404bbf;
 }
 
 .modal-checkbox:checked + .checkbox-label .checkbox-icon > .checkbox-icon-svg {
@@ -194,7 +199,6 @@
 }
 
 .checkbox-text a {
-  line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
